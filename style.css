@@ -1,0 +1,120 @@
+/* ------------------------------
+   RESET DEFAULT STYLES
+   (Browsers add default margins/padding,
+   so we remove them for consistency)
+--------------------------------*/
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------
+   BASIC PAGE STYLES
+--------------------------------*/
+body {
+    font-family: Arial, sans-serif; /* Easy-to-read font */
+    line-height: 1.6; /* Adds space between lines for readability */
+}
+
+/* ------------------------------
+   HEADER SECTION
+--------------------------------*/
+header {
+    background: #4CAF50; /* Green background */
+    color: white;        /* White text for contrast */
+    padding: 1rem;       /* Space inside the header */
+    text-align: center;  /* Center the title */
+}
+
+/* ------------------------------
+   NAVIGATION MENU
+--------------------------------*/
+nav {
+    background: #333; /* Dark background for nav bar */
+}
+
+nav ul {
+    display: flex;               /* Arrange items in a row */
+    justify-content: center;     /* Center them horizontally */
+    list-style: none;            /* Remove bullet points */
+    padding: 0;                  /* Remove extra padding */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between each nav item */
+}
+
+nav ul li a {
+    color: white;          /* White links for visibility */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+/* ------------------------------
+   MAIN LAYOUT WITH CSS GRID
+--------------------------------*/
+main {
+    display: grid;  
+    grid-template-columns: 1fr 3fr; /* Sidebar takes 1 part, content takes 3 */
+    gap: 20px;                      /* Space between grid items */
+    padding: 20px;                  /* Padding around the grid */
+}
+
+/* ------------------------------
+   CONTENT AREA
+--------------------------------*/
+.content {
+    background: #f4f4f4; /* Light grey background */
+    padding: 20px;       /* Space inside the content box */
+}
+
+/* ------------------------------
+   SIDEBAR AREA
+--------------------------------*/
+.sidebar {
+    background: #e2e2e2; /* Slightly darker grey for sidebar */
+    padding: 20px;
+}
+
+/* ------------------------------
+   FOOTER SECTION
+--------------------------------*/
+footer {
+    background: #333;      /* Dark background like the nav bar */
+    color: white;          /* White text for contrast */
+    text-align: center;    /* Center align text */
+    padding: 1rem;
+    position: relative;    /* Keeps footer at the bottom without overlapping */
+    bottom: 0;
+    width: 100%;           /* Full width across the page */
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+   (Make layout adjust on smaller screens)
+--------------------------------*/
+
+/* Tablet-sized screens (768px and below) */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Stack sidebar and content vertically */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav links instead of row */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between stacked nav items */
+    }
+}
+
+/* Mobile-sized screens (480px and below) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Make header text smaller on small screens */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Make footer text smaller for readability */
+    }
+}
